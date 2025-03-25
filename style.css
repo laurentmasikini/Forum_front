@@ -1,0 +1,283 @@
+:root {
+    --primary: #1a56db;
+    --primary-dark: #1e40af;
+    --primary-light: #3b82f6;
+    --white: #ffffff;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--gray-100);
+    color: var(--gray-800);
+    line-height: 1.5;
+}
+
+/* Navigation */
+.navbar {
+    background-color: #1e3a8a;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--white);
+    text-decoration: none;                                                                                                                                                                                                                                                                                  
+    transition: color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #fde047;
+}
+
+.nav-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Boutons */
+.btn-connexion {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 0.875rem;
+}
+
+.btn-connexion:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-connexion.connected {
+    background-color: var(--gray-600);
+}
+
+/* Recherche */
+.search-container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 0.75rem 3rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 9999px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.search-box input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.search-icon,
+.filter-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray-400);
+}
+
+.search-icon {
+    left: 1rem;
+}
+
+.filter-icon {
+    right: 1rem;
+    cursor: pointer;
+}
+
+/* Filtres */
+.filters {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 9999px;
+    background-color: var(--white);
+    color: var(--gray-700);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filter-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.filter-btn.active {
+    background-color: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+/* Grille de bons plans */
+.deals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.deal-card {
+    background: var(--white);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+
+.deal-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.deal-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.category-tag {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+}
+
+.deal-content {
+    padding: 1.5rem;
+}
+
+.deal-content h3 {
+    font-size: 1.25rem;
+    color: var(--gray-900);
+    margin-bottom: 0.5rem;
+}
+
+.deal-content p {
+    color: var(--gray-600);
+    margin-bottom: 1.5rem;
+}
+
+.deal-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.like-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    color: var(--gray-500);
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.like-btn:hover {
+    color: var(--primary);
+}
+
+.btn-profiter {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-profiter:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Responsive Oklm*/
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .filters {
+        flex-wrap: wrap;
+        padding: 0 1rem;
+    }
+
+    .deals-grid {
+        padding: 1rem;
+        grid-template-columns: 1fr;
+    }
+}

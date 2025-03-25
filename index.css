@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Styles personnalisés */
+.nav-link {
+@apply flex items-center gap-2 transition-colors duration-200 hover:text-yellow-300;
+}
+
+.nav-link.active {
+@apply text-yellow-300;
+}
+
+.search-input {
+@apply w-full pl-10 pr-4 py-3 border rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm;
+}
+
+.btn {
+@apply px-4 py-2 rounded-full transition-colors duration-200;
+}
+
+.btn-primary {
+@apply bg-blue-600 text-white hover:bg-blue-500;
+}
+
+.btn-outline {
+@apply bg-white shadow-sm hover:shadow;
+}
+
+.card {
+@apply bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden;
+}
+
+.card-image {
+@apply w-full h-48 object-cover;
+}
+
+.card-body {
+@apply p-6;
+}
+
+.card-title {
+@apply text-xl font-semibold text-gray-900;
+}
+
+.card-text {
+@apply text-gray-600 mt-2;
+}
+
+.category-tag {
+@apply absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm;
+}
+
+.like-button {
+@apply flex items-center gap-2 text-gray-500 hover:text-blue-600 transition-colors duration-200;
+}
+
+.discussion-meta {
+@apply flex items-center gap-6 mt-4 text-sm text-gray-500;
+}
+
+.avatar {
+@apply w-6 h-6 rounded-full;
+
+}

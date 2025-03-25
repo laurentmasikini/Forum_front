@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Bazar Étudiant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation pas encore fonctionnel Zeubi-->
+    <nav class="navbar">
+        <div class="logo">Le Bazar Étudiant</div>
+        <div class="nav-links">
+            <a href="#" class="nav-link active">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                </svg>
+                Discussions
+            </a>
+            <a href="#" class="nav-link">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+                    <line x1="7" y1="7" x2="7.01" y2="7"/>
+                </svg>
+                Bons Plans
+            </a>
+            <button class="btn-connexion">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                    <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+                    <polyline points="10 17 15 12 10 7"/>
+                    <line x1="15" y1="12" x2="3" y2="12"/>
+                </svg>
+                Connexion
+            </button>                                                                                                                                                                                                                                                                                                                                         <!---  //////////////// PEULCIS //////////////////-- >                                                                                                               
+        </div>
+    </nav>
+
+    <!-- Barre de recherche -->
+    <div class="search-container">
+        <div class="search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="text" placeholder="Rechercher dans le forum...">
+            <svg class="filter-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Filtres -->
+    <div class="filters">
+        <button class="filter-btn active">Tous</button>
+        <button class="filter-btn">Restauration</button>
+        <button class="filter-btn">Loisirs</button>
+        <button class="filter-btn">Sport</button>
+        <button class="filter-btn">Culture</button>
+    </div>
+
+    <!-- Grille de bons plans -->
+    <div class="deals-grid">
+        <!-- Resto U -->
+        <div class="deal-card">
+            <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352" alt="Resto U" class="deal-image">
+            <span class="category-tag">Restauration</span>
+            <div class="deal-content">
+                <h3>Réduction resto U</h3>
+                <p>3,30€ le repas complet ! Valable dans tous les restos U de la ville avec ta carte étudiante.</p>
+                <div class="deal-actions">
+                    <button class="like-btn">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
+                        </svg>
+                        <span>0</span>
+                    </button>
+                    <button class="btn-profiter">En profiter</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ciné -->
+        <div class="deal-card">
+            <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c" alt="Cinéma" class="deal-image">
+            <span class="category-tag">Loisirs</span>
+            <div class="deal-content">
+                <h3>Ciné étudiant</h3>
+                <p>5€ la séance le mardi dans tous les cinémas Pathé. Présente ta carte étudiante en caisse !</p>
+                <div class="deal-actions">
+                    <button class="like-btn">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
+                        </svg>
+                        <span>0</span>
+                    </button>
+                    <button class="btn-profiter">En profiter</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sport -->
+        <div class="deal-card">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48" alt="Salle de sport" class="deal-image">
+            <span class="category-tag">Sport</span>
+            <div class="deal-content">
+                <h3>Salle de sport</h3>
+                <p>Abonnement à 20€/mois sans engagement avec Basic Fit. Offre limitée !</p>
+                <div class="deal-actions">
+                    <button class="like-btn">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
+                        </svg>
+                        <span>0</span>
+                    </button>
+                    <button class="btn-profiter">En profiter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Gestion des likes
+        document.querySelectorAll('.like-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const count = this.querySelector('span');
+                count.textContent = parseInt(count.textContent) + 1;
+            });
+        });
+
+        // Gestion des filtres
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelector('.filter-btn.active').classList.remove('active');
+                this.classList.add('active');
+            });
+        });
+
+        // Gestion de la connexion
+        const btnConnexion = document.querySelector('.btn-connexion');
+        btnConnexion.addEventListener('click', function() {
+            const isConnected = this.classList.toggle('connected');
+            this.innerHTML = isConnected ? `
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                    <polyline points="16 17 21 12 16 7"/>
+                    <line x1="21" y1="12" x2="9" y2="12"/>
+                </svg>
+                Déconnexion
+            ` : `
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                    <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+                    <polyline points="10 17 15 12 10 7"/>
+                    <line x1="15" y1="12" x2="3" y2="12"/>
+                </svg>
+                Connexion
+            `;
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!--// STARFULLA LE CODE ↑↑↑↑ ♦→   -->
